@@ -1,0 +1,40 @@
+---
+title: "Seasonal Traffic Volume"
+author: "Sean Parker"
+date: "2024-10-08"
+categories: [Traffic, code, analysis]
+image: "Scatterplot_1.png"
+code-fold: false
+code-tools: true
+
+---
+
+Analysis of daily average traffic volume for the year 2023
+
+## Data
+
+Seasonal daily averages generated from a .csv file using R
+
+```{r}
+#| include: false
+
+
+library(tidyverse)
+season_avg <- read.csv("Season_avg.csv")
+```
+
+## Visualization
+
+```{r}
+season_avg$date <- as.Date(season_avg$date)
+
+Scatterplot_1 <- ggplot(data = season_avg, aes(x = date, y = avg_cars)) +
+  geom_point() +
+  geom_smooth() +
+  labs(title = "Daily Traffic Volume", x = "Date", y = "Average Daily Cars")
+
+Scatterplot_1
+
+ggsave(Scatterplot_1, file = "Scatterplot_1.png")
+
+```

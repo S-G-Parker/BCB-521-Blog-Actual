@@ -1,0 +1,17 @@
+{
+  "hash": "6bdc15ba232758788a6d81ae52cd6cbc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Seasonal Traffic Volume\"\nauthor: \"Sean Parker\"\ndate: \"2024-10-08\"\ncategories: [Traffic, code, analysis]\nimage: \"Scatterplot_1.png\"\ncode-fold: false\ncode-tools: true\n\n---\n\n\n\nAnalysis of daily average traffic volume for the year 2023\n\n## Data\n\nSeasonal daily averages generated from a .csv file using R\n\n\n\n\n\n\n\n## Visualization\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nseason_avg$date <- as.Date(season_avg$date)\n\nScatterplot_1 <- ggplot(data = season_avg, aes(x = date, y = avg_cars)) +\n  geom_point() +\n  geom_smooth() +\n  labs(title = \"Daily Traffic Volume\", x = \"Date\", y = \"Average Daily Cars\")\n\nScatterplot_1\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n```\n\n\n:::\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n\n```{.r .cell-code}\nggsave(Scatterplot_1, file = \"Scatterplot_1.png\")\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nSaving 7 x 5 in image\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n```\n\n\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

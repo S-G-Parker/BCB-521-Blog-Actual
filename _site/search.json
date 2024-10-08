@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BCB 521 Blog Actual",
+    "section": "",
+    "text": "Seasonal Traffic Volume\n\n\n\n\n\n\nTraffic\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nOct 8, 2024\n\n\nSean Parker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 13, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Seasonal Traffic Volume",
+    "section": "",
+    "text": "Analysis of daily average traffic volume for the year 2023"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#data",
+    "href": "posts/post-with-code/index.html#data",
+    "title": "Seasonal Traffic Volume",
+    "section": "Data",
+    "text": "Data\nSeasonal daily averages generated from a .csv file using R"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#visualization",
+    "href": "posts/post-with-code/index.html#visualization",
+    "title": "Seasonal Traffic Volume",
+    "section": "Visualization",
+    "text": "Visualization\n\nseason_avg$date &lt;- as.Date(season_avg$date)\n\nScatterplot_1 &lt;- ggplot(data = season_avg, aes(x = date, y = avg_cars)) +\n  geom_point() +\n  geom_smooth() +\n  labs(title = \"Daily Traffic Volume\", x = \"Date\", y = \"Average Daily Cars\")\n\nScatterplot_1\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\nggsave(Scatterplot_1, file = \"Scatterplot_1.png\")\n\nSaving 7 x 5 in image\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'"
+  }
+]
